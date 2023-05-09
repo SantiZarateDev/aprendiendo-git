@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/3d40bd6dc7.js" crossorigin="anonymous"></script>
     <title>Prueba git</title>
 </head>
+
 <body>
     <header>
         <nav class="header__nav">
-            <ul class="headear__nav__ul">
+            <ul class="header__nav__ul">
                 <li>Papa</li>
                 <li>Cebolla</li>
                 <li>Zanahoria</li>
@@ -19,29 +23,48 @@
     </header>
 
     <main>
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum culpa quas nam beatae tempora!</p>
-            <p>Hola buenas, esto lo modifique desde otra computador, probando git :D</p>
+        <div class="titulo">
+            <h1>Aprendiendo <span class="titulo__git">Git</span></h1>
+            <p>Aprendiendo a usar la tecnologia Git</p>
         </div>
 
         <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum culpa quas nam beatae tempora!</p>
-            <p>Hola buenas, esto lo modifique desde otra computador, probando git :D</p>
-            <div class="container__img">
-                <img src="#" alt="">
-            </div>
+            <h2>Acciones basicas para el uso de git</h2>
+            <article>
+                <h1 class="git__h1"><i class="fa fa-square-arrow-up-right"></i> Inicializar repositorio</h1>
+                <div class="git__acordeon">
+                    <div>
+                        <div class="git__acordeon__texto">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia laborum quidem necessitatibus
+                            amet
+                            consequuntur et accusamus repellendus corporis, nihil fugiat adipisci officia fugit! Id
+                            similique
+                            nostrum sunt fuga dolorum dicta?
+                        </div>
+                        
+                        <div class="git__acordeon__codigo">
+                            <p>-git init</p>
+                            <p>-git remote add origin</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </div>
-
-        <footer class="footer">
-            <nav>
-                <p>Holaa</p>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
-            </nav>
-        </footer>
     </main>
+
+    <footer class="footer">
+        <nav class="footer__nav">
+            <div>
+                <p>Pagina Creada por @SantiagoZarate</p>
+                <p>2023</p>
+                <i class="fa"></i>
+            </div>
+            <ul>
+                <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
+
 </html>

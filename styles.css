@@ -1,0 +1,129 @@
+:root{
+    --bgColorDark:rgb(0,2,7);
+    --whiteColor:rgb(220,220,220);
+    --borderColorLight:rgba(255,255,255,0.2);
+    --blackColor:rgb(0,0,0);
+    --bgCodeColorDark:rgb(5,15,5);
+    --mainColorDark:rgba(190, 188, 255, 0.507);
+}   
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bgColorDark);
+    color: var(--whiteColor);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ////// */
+/* HEADER */
+/* ////// */
+
+.header__nav{
+    /* background-color: red; */
+    border-bottom: 1px solid var(--borderColorLight);
+}
+
+.header__nav__ul{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    list-style: none;
+    padding: 1.5em 0;
+}
+
+/* //// */
+/* MAIN */
+/* //// */
+
+.titulo{
+    text-align: center;
+    padding: 5em;
+}
+
+.titulo h1{
+    font-size: 4rem;
+}
+
+.titulo__git{
+    background-color: white;
+    color: var(--blackColor);
+}
+
+/* CONTAINER ARTICULOS */
+
+.container{
+    margin: 0 3em;
+}
+
+h2{
+    padding-bottom: 1em;
+}
+
+article{
+    border-bottom: 1px solid var(--borderColorLight) ;
+}
+
+.git__acordeon{
+    /* background-color: red; */
+    display: grid;
+    grid-template-rows: 0fr;
+    padding: 0rem;
+    transition: grid-template-rows 500ms, padding 500ms;
+}
+
+.git__acordeon > div{
+    overflow: hidden;
+}
+
+article:hover .git__acordeon{
+    grid-template-rows: 1fr;
+    padding: 2em;
+}
+
+.git__acordeon__codigo{
+    background-color: var(--bgCodeColorDark);
+    padding: 1em;
+}
+
+/* ////// */
+/* FOOTER */
+/* ////// */
+
+
+.footer__nav{
+    border-top: 1px solid var(--borderColorLight);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    padding: 2em 3em;
+    /* margin: 0 2em; */
+}
+
+.footer__nav > ul{
+    display: flex;
+    list-style-type: none;
+    gap: 1em;
+    align-items: center;
+    border: 1px solid var(--mainColorDark);
+    padding: 0 1em;
+    border-radius: 10px;
+}
+
+.footer__nav a{
+    color: var(--mainColorDark);
+}
+
+.footer__nav > div{
+    font-size: 0.8rem;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    color: var(--mainColorDark);
+}
