@@ -2,7 +2,8 @@
 
 :root {
     --bgColorDark: rgb(0, 2, 7);
-    --whiteColor: rgb(220, 220, 220);
+    --whiteColor: rgba(220, 220, 220, 1);
+    --whiteColorLowOpacity: rgba(220, 220, 220, 0.3);
     --borderColorLight: rgba(255, 255, 255, 0.2);
     --blackColor: rgb(0, 0, 0);
     --bgCodeColorDark: rgb(5, 15, 5);
@@ -82,18 +83,33 @@ body {
     margin-bottom: 2em;
 }
 
-/* h2 {
-    padding-bottom: 1em;
-} */
-
 article {
     border-bottom: 1px solid var(--borderColorLight);
     font-size: 0.9rem;
     margin-bottom: 2em ;
 }
 
+article:hover .git__h1{
+    color: var(--whiteColor);
+}
+
 .git__h1{
     font-weight: 100;
+    color: var(--whiteColorLowOpacity);
+    transition: color 500ms ;
+    cursor: pointer;
+}
+
+.opacidad-alta{
+    color: var(--whiteColor);
+}
+
+i{
+    transition: transform 500ms;
+}
+
+.rotar-flecha{
+    transform: rotate(90deg);
 }
 
 .git__acordeon {
@@ -108,7 +124,8 @@ article {
     overflow: hidden;
 }
 
-article:hover .git__acordeon {
+/* CLASES AÑADIDA POR JAVASCRIPT */
+.abrir-acordeon{
     grid-template-rows: 1fr;
     padding: 3em 3em;
 }
