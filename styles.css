@@ -1,34 +1,41 @@
-:root{
-    --bgColorDark:rgb(0,2,7);
-    --whiteColor:rgb(220,220,220);
-    --borderColorLight:rgba(255,255,255,0.2);
-    --blackColor:rgb(0,0,0);
-    --bgCodeColorDark:rgb(5,15,5);
-    --mainColorDark:rgba(190, 188, 255, 0.507);
-}   
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
-*{
+:root {
+    --bgColorDark: rgb(0, 2, 7);
+    --whiteColor: rgb(220, 220, 220);
+    --borderColorLight: rgba(255, 255, 255, 0.2);
+    --blackColor: rgb(0, 0, 0);
+    --bgCodeColorDark: rgb(5, 15, 5);
+    --mainColorDark: rgba(190, 188, 255, 0.507);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: var(--bgColorDark);
     color: var(--whiteColor);
-    font-family:Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ////// */
 /* HEADER */
 /* ////// */
 
-.header__nav{
+.header__nav {
     /* background-color: red; */
     border-bottom: 1px solid var(--borderColorLight);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--mainColorDark);
+    padding: 0 3em;
 }
 
-.header__nav__ul{
+.header__nav__ul {
     display: flex;
     justify-content: center;
     gap: 2em;
@@ -36,66 +43,96 @@ body{
     padding: 1.5em 0;
 }
 
+.header__nav a {
+    color: var(--mainColorDark);
+}
+
 /* //// */
 /* MAIN */
 /* //// */
 
-.titulo{
+.titulo {
     text-align: center;
     padding: 5em;
 }
 
-.titulo h1{
+.titulo h1 {
     font-size: 4rem;
 }
 
-.titulo__git{
+.titulo__git {
     background-color: white;
     color: var(--blackColor);
 }
 
 /* CONTAINER ARTICULOS */
 
-.container{
+.container {
     margin: 0 3em;
 }
 
-h2{
+.container__titulo{
+    /* background-color: red; */
+    display:inline-flex;
+    border: 1px solid var(--borderColorLight);
+    padding: 0.5em;
+    border-radius: 10px;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+/* h2 {
     padding-bottom: 1em;
+} */
+
+article {
+    border-bottom: 1px solid var(--borderColorLight);
+    font-size: 0.9rem;
+    margin-bottom: 2em ;
 }
 
-article{
-    border-bottom: 1px solid var(--borderColorLight) ;
+.git__h1{
+    font-weight: 100;
 }
 
-.git__acordeon{
+.git__acordeon {
     /* background-color: red; */
     display: grid;
     grid-template-rows: 0fr;
-    padding: 0rem;
+    padding: 1em 2em;
     transition: grid-template-rows 500ms, padding 500ms;
 }
 
-.git__acordeon > div{
+.git__acordeon>div {
     overflow: hidden;
 }
 
-article:hover .git__acordeon{
+article:hover .git__acordeon {
     grid-template-rows: 1fr;
-    padding: 2em;
+    padding: 3em 3em;
 }
 
-.git__acordeon__codigo{
+.git__acordeon__texto {
+    padding-bottom: 2em;
+}
+
+.git__acordeon__codigo {
     background-color: var(--bgCodeColorDark);
     padding: 1em;
+    font-family: 'Inconsolata', monospace;
+    border-radius: 0 0 10px 10px;
+}
+
+.code__git{
+    color: rgba(0, 231, 0, 0.6);
 }
 
 /* ////// */
 /* FOOTER */
 /* ////// */
 
-
-.footer__nav{
+.footer__nav {
     border-top: 1px solid var(--borderColorLight);
     width: 100%;
     display: flex;
@@ -106,7 +143,7 @@ article:hover .git__acordeon{
     /* margin: 0 2em; */
 }
 
-.footer__nav > ul{
+.footer__nav>ul {
     display: flex;
     list-style-type: none;
     gap: 1em;
@@ -116,11 +153,11 @@ article:hover .git__acordeon{
     border-radius: 10px;
 }
 
-.footer__nav a{
+.footer__nav a {
     color: var(--mainColorDark);
 }
 
-.footer__nav > div{
+.footer__nav>div {
     font-size: 0.8rem;
     font-weight: 100;
     display: flex;
